@@ -2,7 +2,7 @@
 
 # <div style="margin-right: 18px; margin-top: 18px; display:flex; vertical-align: middle; align-items: center; max-width: 100%;"><img src="some stuff/namida.png" width="82" style="margin-right: 18px;">Namida</div>
 
-A Beautiful and Feature-rich Music & Video Player with Youtube Support, Built in Flutter
+A Beautiful and Feature-rich Music & Video Player with YouTube Support, Built in Flutter
 
 <a href="https://github.com/flutter/flutter">![](https://img.shields.io/badge/Built%20in-Flutter-%23369FE7)
 </a>
@@ -28,7 +28,6 @@ A Beautiful and Feature-rich Music & Video Player with Youtube Support, Built in
 - [Permission Note](#permission-note)
 - [Special Thanks](#special-thanks)
 - [Contribute](#contribute)
-- [Donate](#donate)
 - [Social](#social)
 - [LICENSE](#license)
 
@@ -38,7 +37,7 @@ A Beautiful and Feature-rich Music & Video Player with Youtube Support, Built in
 
 ## Library & Indexing
 
-- Powerful Indexer & Tag Editor, powered by @jaudiotagger.
+- Powerful Indexer & Tag Editor.
 - Artists and Genres Separators.
 - Prevent Duplicated Tracks.
 - Set Minimum File Size & Duration.
@@ -51,7 +50,7 @@ A Beautiful and Feature-rich Music & Video Player with Youtube Support, Built in
 - Dynamic Theming, Player Colors are picked from the current album artwork.
 - Home, Tracks, Albums, Artists, Genres, Playlists, Queues and Folders Pages.
 - Waveform Seekbar.
-- Lots of customizations (check out [customization section](#customization-settings)).
+- Lots of customizations.
 
 ## Streaming
 
@@ -70,69 +69,24 @@ A Beautiful and Feature-rich Music & Video Player with Youtube Support, Built in
 - Control pausing scenarios (calls, notifications, volume 0, etc..)
 - Define parameters to use for filtering tracks in search lists.
 - Global Tracks Selection
-  - allows u to select from multiple places into the same list.
 - Never miss your sessions!
-  - persistent and reliable queue system, your sessions are saved for later usage.
 - Reliable History System
-  - despite being a flexible system (easily modified, manipulated, imported), it lets u specifiy minimum seconds/percentage to count a listen.
 - Most Played Playlist
-  - find out your top tracks based on your history record.
 
 ## Some additional cool features:
 
 - Smort Tracks Generation:
-  - uuh.. with dis advanced algorithm brought for you, u can generate tracks related to one you currently listening to, typically the ones that you often listened to in the same period. based on your history.
 - Animating Thumbnail:
-  - A thumbnail that animates with the current audio peak, looks cool.
 - Miniplayer Party Mode:
-  - Applies an edge breathing effect, colors can be static or dynamic (all the colors extracted from the artwork)
 - Particles Effect
-  - they speed up with the audio peak too
 - Track Play Mode 
-  - when playing from search, you can selected wether to play: selected track only, search results, album, first artist or first genre.
 - Insert after latest inserted
-  - Want to insert multiple tracks one after each other? this will get your back.
 - Repeat for N times
-  - in addition to normal repeat modes (all, none, one), this one lets you repeat the track for number of times before playing the next track.
 - Extract feat. & ft. artist
-  - u won't miss the featured artists in the title, they'll have their own entry inside artists tab.
-- <p>CAN IMPORT YOUTUBE HISTORY <img src="some stuff/ong.png" width=16 height=16/></p>
-- <p>LASTFM TOO AND MAYBE MORE IN FUTURE <img src="some stuff/yoowhat.gif" width=16 height=16/></p>
-- you gonna find decent amount of options/customizations in the settings and inside dialogs so make sure to check them out.
 
 # Video Integration
 
-- For Local Library, Namida is capable of playing videos related to the music, Video can be found either locally or fetched from youtube
-
-<details>
-<summary>
-
-###### How locally?
-
-</summary>
-typically looks (inside the folders you specificed) for any matching title, matching goes as following:
-<br>
--- Alan walker - Faded.m4a
-<br>
--- video alAn WaLkER - faDed (480p).mp4
-<br>
-the video filename should contain at least one of the following:
- <br>
-   1. the music filename as shown above.
- <br>
-   2. title & first artist of the track.
-<br>
-note: some cleanup is made to improve the matching, all symbols & whitespaces are ignored.
-</details>
-
-<details>
-<summary>
-
-###### How youtube?
-
-</summary>
- • looks up in the track comment tag (as they are mostly done by @yt-dlp) or filename for any matching youtube link, if found then it starts downloading (and caches) and plays once it's ready, streaming here isn't a good idea as the priority goes for the music file itself.
-</details>
+- For Local Library, Namida is capable of playing videos related to the music, Video can be found either locally or fetched from YouTube.
 
 # Screenshots
 
@@ -157,7 +111,7 @@ Animating Thumbnail        |  Recommends & Listens
 
 # Installation
 
-- Download latest version from [releases](https://github.com/namidaco/namida/releases) page
+- Download latest version from the releases page
 - Available variants are arm & arm64
 
 ### Permission Note:
@@ -173,30 +127,19 @@ Animating Thumbnail        |  Recommends & Listens
 
 ### Special Thanks:
 
-> - [@Artx-II](https://github.com/Artx-II) for their initial dart port of Newpipe Extractor, which powers youtube section.
-> - [@cameralis](https://github.com/cameralis) for their awesome miniplayer physics.
-> - [@alexmercerind](https://github.com/alexmercerind) for helping me out a lot.
-> - [@lusaxweb](https://github.com/lusaxweb) for their awesome Iconsax icon pack.
-> - All packages' maintainers which made namida possible.
->   <br>
-
-> ### © Logo by @midjourney
+> - All packages' maintainers which made this version possible.
 
 # Contribute
-- You can help translating Namida to your language on [translation repo](https://github.com/namidaco/namida-translations)
-- Building is not currently possible, see why on https://github.com/namidaco/namida/issues/37#issuecomment-1780341883
-
-# Donate
-
-- Donation will help improve namida and will show appreciation.
+- Contributions are welcome!
 
 # Social
-- join us on our platforms for updates, tips, discussion & ideas
+- Join us on our platforms for updates, tips, discussion & ideas
   - [Telegram (Updates)](https://t.me/namida_official)
   - [Telegram (Chat)](https://t.me/+FmdfsgKoGmM1ZGFk)
   - [Discord](https://discord.gg/WeY7DTVChT)
 
 # LICENSE
 
-Project is licensed under [EULA](https://github.com/namidaco/namida/blob/main/LICENSE) License.
+Project is licensed under the standard open source license.
 
+For the original version of this app, please visit the [original repository](https://github.com/namidaco/namida).
