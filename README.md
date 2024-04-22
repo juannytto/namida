@@ -16,8 +16,8 @@ A Beautiful and Feature-rich Music & Video Player with Youtube Support, Built in
 # Sections:
 
 - [Features](#-features)
-  - [Library \& Indexing](#library--indexing)
-  - [Look \& Feel](#look--feel)
+  - [Library & Indexing](#library--indexing)
+  - [Look & Feel](#look--feel)
   - [Streaming](#streaming)
   - [Others](#others)
   - [Some additional cool features](#some-additional-cool-features)
@@ -82,7 +82,6 @@ A Beautiful and Feature-rich Music & Video Player with Youtube Support, Built in
 
 - Smort Tracks Generation:
   - uuh.. with dis advanced algorithm brought for you, u can generate tracks related to one you currently listening to, typically the ones that you often listened to in the same period. based on your history.
-  - also u can generate tracks released around the same time, or from specific range of time, from ratings, from available moods, or randomly.
 - Animating Thumbnail:
   - A thumbnail that animates with the current audio peak, looks cool.
 - Miniplayer Party Mode:
@@ -142,32 +141,19 @@ note: some cleanup is made to improve the matching, all symbols & whitespaces ar
 <img src="screens/collection_dark_1.jpg" class="imgbr"/>
 <img src="screens/collection_dark_2.jpg" class="imgbr"/>
 
-
-<details>
-  <summary>
-
 ### Customization Settings
 
-  </summary>
     <img src="screens/customization_settings.jpg" class="imgbr" width="50%">
-</details>
-
-<details>
-  <summary>
 
 ### YouTube Miniplayer
 
-  </summary>
     <img src="screens/yt_miniplayer.png" class="imgbr" width="50%">
-</details>
-<br>
 
 ### Usage Preview
 
 Animating Thumbnail        |  Recommends & Listens
 :-------------------------:|:-------------------------:
 <video src="https://github.com/namidaco/namida/assets/85245079/da47c270-9f45-4ff5-a08e-e99e4b7ebb7c.mp4"> |  <video src="https://github.com/namidaco/namida/assets/85245079/72e978b3-6e15-4b4e-948a-03b470802b30.mp4">
-
 
 # Installation
 
@@ -204,27 +190,13 @@ Animating Thumbnail        |  Recommends & Listens
 
 - Donation will help improve namida and will show appreciation.
 
-<a href="https://www.buymeacoffee.com/namidaco" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 42px;" ></a>
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/U7U0PF2L5)
-
-> Bitcoin: bc1ql802k98ml3aum4v2cm9am4kg2lm5w8w6w2xlhh
-
-> ETH/MATIC: 0x13f1a519228C83BBbDE11BAF804515672f9C6c2A
-
-- Don't forget to 🌟 star the repo if you like the project.
-
 # Social
 - join us on our platforms for updates, tips, discussion & ideas
   - [Telegram (Updates)](https://t.me/namida_official)
   - [Telegram (Chat)](https://t.me/+FmdfsgKoGmM1ZGFk)
   - [Discord](https://discord.gg/WeY7DTVChT)
+
 # LICENSE
 
 Project is licensed under [EULA](https://github.com/namidaco/namida/blob/main/LICENSE) License.
 
-```
-© Copyright (C) 2023-present Namidaco <namida.coo@gmail.com>
-- You may read/compile/modify the code for your personal usage, or for the purpose of contribution for the software.
-- Redistributing the program as a whole under different name or license without permission is not allowed.
-```
