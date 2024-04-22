@@ -119,54 +119,13 @@ class _YoutubeThumbnailState extends State<YoutubeThumbnail> with LoadingItemsDe
         id: widget.videoId,
         channelUrl: finalChAvatarUrl,
       );
-      imagePath = res?.path;
-
-      if (res == null) {
-        await Future.delayed(Duration.zero);
-        if (!await canStartLoadingItems()) return;
-        if (widget.videoId != null) {
-          // -- for video:
-          // --- isImportantInCache -> fetch to file
-          // --- !isImportantInCache -> fetch lowres bytes only
-          if (widget.isImportantInCache) {
-            res = await ThumbnailManager.inst.getYoutubeThumbnailAndCache(
-              id: widget.videoId,
-              channelUrlOrID: finalChAvatarUrl,
-              hqChannelImage: fetchHQChImg,
-              isImportantInCache: true,
-              bytesIfWontWriteToFile: (bytes) {
-                if (mounted) setState(() => imageBytes = bytes);
-              },
-            );
-          } else {
-            final lowerRes = await ThumbnailManager.inst.getYoutubeThumbnailAsBytes(
-              youtubeId: widget.videoId,
-              lowerResYTID: true,
-              keepInMemory: true,
-            );
-            if (lowerRes != null && lowerRes.isNotEmpty) {
-              if (mounted) setState(() => imageBytes = lowerRes);
-            }
-          }
-        } else {
-          // for channels/playlists -> default
-          res = await ThumbnailManager.inst.getYoutubeThumbnailAndCache(
-            id: widget.videoId,
-            channelUrlOrID: finalChAvatarUrl,
-            hqChannelImage: fetchHQChImg,
-            isImportantInCache: widget.isImportantInCache,
-            bytesIfWontWriteToFile: (bytes) {
-              if (mounted) setState(() => imageBytes = bytes);
-            },
-          );
-        }
-      }
+      imagePath = res.path;
 
       widget.onImageReady?.call(res);
 
       // -- only put the image if bytes are NOT valid, or if specified by parent
       if (imagePath == null && (!widget.preferLowerRes || (imageBytes?.isEmpty ?? true))) {
-        if (mounted) setState(() => imagePath = res?.path);
+        if (mounted) setState(() => imagePath = res.path);
       }
     }
 

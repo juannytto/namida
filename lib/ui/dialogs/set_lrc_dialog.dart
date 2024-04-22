@@ -409,27 +409,27 @@ void showLRCSetDialog(Track track, Color colorScheme) async {
                                     },
                                   ),
                                   const SizedBox(width: 6.0),
-                                  if (l.file != null) ...[
-                                    if (l.synced && !l.fromInternet)
-                                      NamidaIconButton(
-                                        horizontalPadding: 0.0,
-                                        icon: Broken.timer_1,
-                                        iconSize: 20.0,
-                                        onPressed: () {
-                                          showEditCachedSyncedTimeOffsetDialog(l);
-                                        },
-                                      ),
-                                    const SizedBox(width: 6.0),
+                                  ...[
+                                  if (l.synced && !l.fromInternet)
                                     NamidaIconButton(
                                       horizontalPadding: 0.0,
-                                      icon: Broken.trash,
+                                      icon: Broken.timer_1,
                                       iconSize: 20.0,
                                       onPressed: () {
-                                        showDeleteLyricsDialog(l);
+                                        showEditCachedSyncedTimeOffsetDialog(l);
                                       },
                                     ),
-                                    const SizedBox(width: 4.0),
-                                  ],
+                                  const SizedBox(width: 6.0),
+                                  NamidaIconButton(
+                                    horizontalPadding: 0.0,
+                                    icon: Broken.trash,
+                                    iconSize: 20.0,
+                                    onPressed: () {
+                                      showDeleteLyricsDialog(l);
+                                    },
+                                  ),
+                                  const SizedBox(width: 4.0),
+                                ],
                                 ],
                               ),
                               const SizedBox(height: 8.0),

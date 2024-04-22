@@ -216,7 +216,7 @@ class FAudioTaggerController {
         if (artworkDirectory != null) {
           // specified directory to save in, the file is expected to exist here.
           File? artworkFile = trackInfo.tags.artwork.file;
-          if (artworkFile == null || !await artworkFile.exists()) {
+          if (!await artworkFile.exists()) {
             final identifiersMap = identifiers ?? _getIdentifiersMap();
             final filename = _defaultGroupArtworksByAlbum ? getArtworkIdentifierFromInfo(trackInfo, identifiersMap) : trackPath.getFilename;
             final res = await NamidaFFMPEG.inst.extractAudioThumbnail(

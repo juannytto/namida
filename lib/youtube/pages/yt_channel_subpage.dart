@@ -69,7 +69,6 @@ class _YTChannelSubpageState extends YoutubeChannelController<YTChannelSubpage> 
       file = ThumbnailManager.inst.imageUrlToCacheFile(id: null, url: channelID);
     }
     file ??= ThumbnailManager.inst.imageUrlToCacheFile(id: null, url: imageUrl);
-    if (file == null) return;
     NamidaNavigator.inst.navigateDialog(
       scale: 1.0,
       blackBg: true,

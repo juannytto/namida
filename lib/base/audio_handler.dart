@@ -1527,7 +1527,7 @@ extension YoutubeIDToMediaItem on YoutubeID {
 
     final title = artistAndTitle?.$2?.keepFeatKeywordsOnly() ?? videoName ?? '';
     String? artistName = artistAndTitle?.$1;
-    if ((artistName == null || artistName == '') && channelName != null) {
+    if ((artistName == '') && channelName != null) {
       const topic = '- Topic';
       final startIndex = (channelName.length - topic.length).withMinimum(0);
       artistName = channelName.replaceFirst(topic, '', startIndex).trimAll();

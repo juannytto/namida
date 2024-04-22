@@ -78,11 +78,6 @@ extension YoutubeIDUtils on YoutubeID {
     Duration? dur;
     final a = YoutubeController.inst.getVideoInfo(id, checkFromStorage: true);
     dur = a?.duration;
-
-    if (dur == null) {
-      final b = await YoutubeController.inst.fetchVideoDetails(id);
-      dur = b?.duration;
-    }
     return dur;
   }
 }

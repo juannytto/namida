@@ -470,7 +470,7 @@ class NamidaMiniPlayerYoutubeID extends StatelessWidget {
               final stream = Player.inst.currentVideoStream;
               final cached = Player.inst.currentCachedVideo;
               int? size = stream?.sizeInBytes;
-              if (size == null || size == 0) {
+              if (size == 0) {
                 size = cached?.sizeInBytes;
               }
               final sizeFinal = size ?? 0;

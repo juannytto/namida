@@ -1099,10 +1099,6 @@ class NamidaVideoControlsState extends State<NamidaVideoControls> with TickerPro
                                                 qt = video == null ? null : '${video.resolution}p${video.framerateText()}';
                                               } else {
                                                 qt = Player.inst.currentVideoStream?.resolution;
-                                                if (qt == null) {
-                                                  final c = Player.inst.currentCachedVideo;
-                                                  qt = c == null ? null : '${c.resolution}p${c.framerateText()}';
-                                                }
                                               }
                                             }
 

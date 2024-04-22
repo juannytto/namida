@@ -69,7 +69,7 @@ class _MainPageWrapperState extends State<MainPageWrapper> {
       key: NamidaNavigator.inst.innerDrawerKey,
       borderRadius: 42.0.multipliedRadius,
       drawerChild: const NamidaDrawer(),
-      maxPercentage: 0.465.withMaximum(324.0 / context.width),
+      maxPercentage: 0.465.clamp(0, 324.0 / context.width),
       child: const MainScreenStack(),
     );
   }
@@ -122,8 +122,10 @@ class NamidaDrawer extends StatelessWidget {
                   ...LibraryTab.values.map(
                     (e) => NamidaDrawerListTile(
                       enabled: settings.selectedLibraryTab.value == e,
-                      title: e.toText(),
-                      icon: e.toIcon(),
+                      title: LibraryTabUtils(e).toText(),
+                      icon: LibraryTabUtils(e).toIcon(),
+                      // title: "potato",
+                      // icon: Broken.airpod,
                       onTap: () async {
                         ScrollSearchController.inst.animatePageController(e);
                         await Future.delayed(const Duration(milliseconds: 100));

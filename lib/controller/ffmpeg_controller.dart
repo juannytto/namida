@@ -50,15 +50,6 @@ class NamidaFFMPEG {
       final miBackup = MediaInfo.fromMap(map);
       final format = miBackup.format;
       Map? tags = information?.getTags();
-      if (tags == null) {
-        try {
-          final mainTags = (map['streams'] as List?)?.firstWhereEff((e) {
-            final t = e['tags'];
-            return t is Map && t.isNotEmpty;
-          });
-          tags = mainTags?['tags'];
-        } catch (_) {}
-      }
       final mi = MediaInfo(
         path: path,
         streams: miBackup.streams,
@@ -284,24 +275,20 @@ class NamidaFFMPEG {
 
         cachedThumbnail = await ThumbnailManager.inst.getYoutubeThumbnailAndCache(id: ytId);
 
-        if (cachedThumbnail == null) {
-          currentFailed++;
-        } else {
-          final copiedArtwork = await FAudioTaggerController.inst.copyArtworkToCache(
-            trackPath: filee.path,
-            trackExtended: tr,
-            artworkFile: cachedThumbnail,
-          );
+        final copiedArtwork = await FAudioTaggerController.inst.copyArtworkToCache(
+          trackPath: filee.path,
+          trackExtended: tr,
+          artworkFile: cachedThumbnail,
+        );
 
-          final didUpdate = copiedArtwork == null
-              ? false
-              : await editAudioThumbnail(
-                  audioPath: filee.path,
-                  thumbnailPath: copiedArtwork.path,
-                );
-          if (!didUpdate) currentFailed++;
-        }
-
+        final didUpdate = copiedArtwork == null
+            ? false
+            : await editAudioThumbnail(
+                audioPath: filee.path,
+                thumbnailPath: copiedArtwork.path,
+              );
+        if (!didUpdate) currentFailed++;
+      
         currentOperations[OperationType.ytdlpThumbnailFix]!.value = OperationProgress(
           totalFiles: totalFilesLength,
           progress: currentProgress,

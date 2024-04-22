@@ -290,7 +290,7 @@ class YTUtils {
       if (uploaderName != null) album = removeTopic(uploaderName);
     }
 
-    if (artist != null) artist = removeTopic(artist);
+    artist = removeTopic(artist);
 
     String? synopsis;
     if (description != null) {

@@ -481,11 +481,9 @@ class JsonToHistoryParser {
         final filename = trMap['filename'] as String;
         String? link = comment.isEmpty ? null : NamidaLinkRegex.youtubeLinkRegex.firstMatch(comment)?[0];
         link ??= filename.isEmpty ? null : NamidaLinkRegex.youtubeLinkRegex.firstMatch(filename)?[0];
-        if (link != null) {
-          final videoId = link.getYoutubeID;
-          if (videoId != '') tracksIdsMap!.addForce(videoId, Track(trMap['path']));
-        }
-      });
+        final videoId = link.getYoutubeID;
+        if (videoId != '') tracksIdsMap!.addForce(videoId, Track(trMap['path']));
+            });
     }
 
     final jsonResponse = file.readAsJsonSync() as List?;

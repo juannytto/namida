@@ -125,21 +125,6 @@ class Indexer {
           File? file;
           final res = await FAudioTaggerController.inst.extractMetadata(trackPath: info.$1.path);
           file = res.tags.artwork.file;
-          if (file == null) {
-            artwork = await _audioQuery.queryArtwork(
-              id,
-              ArtworkType.AUDIO,
-              format: ArtworkFormat.PNG,
-              quality: 100,
-              size: 720,
-            );
-            if (artwork != null) {
-              final f = File(imagePath);
-              await FileImage(f).evict();
-              await f.writeAsBytes(artwork);
-              file = f;
-            }
-          }
 
           _artworksMapFullRes[imagePath]!.completeIfWasnt(); // to notify that the process was done, but we dont store full res bytes
           await _artworksMapFullRes[imagePath]?.future;

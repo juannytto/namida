@@ -22,9 +22,9 @@ dependencies:
     sdk: flutter
 
   # ---- Core ----
-  get:
-    git:
-      url: https://github.com/MSOB7YY/getx
+  get: ^4.6.1
+    # git:
+    #   url: https://github.com/MSOB7YY/getx
   permission_handler: ^11.0.1
   logger: ^2.2.0
   package_info_plus: ^4.2.0
@@ -38,17 +38,17 @@ dependencies:
   calendar_date_picker2: ^0.5.2
   wakelock_plus: ^1.1.1
   flutter_local_notifications: ^15.1.0
-  flutter_sharing_intent:
-    git:
-      url: https://github.com/MSOB7YY/flutter_sharing_intent
+  flutter_sharing_intent: ^1.1.1
+  #   git:
+  #     url: https://github.com/MSOB7YY/flutter_sharing_intent
   queue: ^3.1.0+2
   jiffy: ^6.2.1
-  playlist_manager:
-    git:
-      url: https://github.com/namidaco/playlist_manager
-  history_manager:
-    git:
-      url: https://github.com/namidaco/history_manager
+  # playlist_manager:
+  #   git:
+  #     url: https://github.com/namidaco/playlist_manager
+  # history_manager:
+  #   git:
+  #     url: https://github.com/namidaco/history_manager
   flutter_html:
     git:
       url: https://github.com/zhourengui/flutter_html
@@ -70,9 +70,9 @@ dependencies:
       url: https://github.com/MSOB7YY/audio_service
       path: audio_service/
   waveform_extractor: ^1.0.3
-  basic_audio_handler:
-    git:
-      url: https://github.com/namidaco/basic_audio_handler
+  # basic_audio_handler:
+  #   git:
+  #     url: https://github.com/namidaco/basic_audio_handler
   on_audio_query:
     git:
       url: https://github.com/MSOB7YY/on_audio_query
@@ -93,9 +93,9 @@ dependencies:
   flutter_staggered_grid_view: ^0.6.2
   flutter_colorpicker: ^1.0.3
   animated_background: ^2.0.0
-  known_extents_list_view_builder:
-    git:
-      url: https://github.com/MSOB7YY/known_extents_listview_fancy
+  # known_extents_list_view_builder:
+  #   git:
+  #     url: https://github.com/MSOB7YY/known_extents_listview_fancy
   flutter_animate: ^4.2.0+1
   dynamic_color: ^1.6.7
   scrollable_positioned_list: ^0.3.8
